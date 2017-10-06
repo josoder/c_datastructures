@@ -13,6 +13,11 @@ typedef struct {
     struct BstNode *right;
 } BstNode;
 
+void free_bst(BstNode *root);
+
+BstNode* find_min(BstNode *root);
+
+BstNode* delete(BstNode *root, int data);
 
 bool search(BstNode *root, int data);
 
