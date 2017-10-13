@@ -14,6 +14,12 @@ BstNode* get_new_node(int data){
     return newNode;
 }
 
+/**
+ * Inser data into tree
+ * @param root
+ * @param data
+ * @return
+ */
 BstNode* insert(BstNode *root, int data){
     if (root == NULL){
         // base case this is where we insert
@@ -28,6 +34,10 @@ BstNode* insert(BstNode *root, int data){
     return root;
 }
 
+/**
+ * Free allocated memory
+ * @param root
+ */
 void free_bst(BstNode* root){
     // tree is empty
     if(root == NULL) {
@@ -41,6 +51,12 @@ void free_bst(BstNode* root){
     root = NULL;
 }
 
+/**
+ * Delete node which contains "data"
+ * @param root
+ * @param data
+ * @return
+ */
 BstNode* delete(BstNode *root, int data){
     // tree is empty
     if(root == NULL) {
@@ -81,6 +97,29 @@ BstNode* delete(BstNode *root, int data){
     return root;
 }
 
+/**
+ * Recursively search for the biggest node in the right subtree
+ * @param root
+ * @return
+ */
+BstNode* find_max(BstNode* root){
+    BstNode *tmp = root;
+
+    if(tmp == NULL) {
+        return root;
+    }
+    else if(root->right!=NULL){
+        tmp = find_max(root->right);
+    }
+    // if there is not a node to the right we found max
+    return tmp;
+}
+
+/**
+ * Recursively search for the smalles node in the left subtree
+ * @param root
+ * @return
+ */
 BstNode* find_min(BstNode* root){
     BstNode *tmp = root;
 
@@ -94,6 +133,12 @@ BstNode* find_min(BstNode* root){
     return tmp;
 }
 
+/**
+ * Recursively search the tree for the node with "data"
+ * @param root
+ * @param data
+ * @return
+ */
 bool search(BstNode *root, int data){
     if(root == NULL) {
         return false;
@@ -107,6 +152,27 @@ bool search(BstNode *root, int data){
     else{
         return search(root->right, data);
     }
+}
 
+/**
+ * Print the tree in order.
+ * @param root
+ */
+void print_tree(BstNode* root){
+    BstNode* tmp = root;
+
+    if(tmp == NULL) {
+        return;
+    }
+
+    if(tmp->left != NULL){
+        print_tree(tmp->left);
+    }
+
+    printf("%d ", tmp->data);
+
+    if(tmp->right != NULL){
+        print_tree(tmp->right);
+    }
 }
 
