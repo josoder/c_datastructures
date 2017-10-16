@@ -1,5 +1,5 @@
-#include "bst_test.h"
-#include "rb_tree_test.h"
+#include "tests/bst_test.h"
+#include "tests/rb_tree_test.h"
 
 int main() {
     //bst_test();

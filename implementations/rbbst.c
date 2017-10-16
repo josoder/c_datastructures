@@ -1,7 +1,7 @@
 //
 // Created by josoder on 13.10.17.
 //
-#include "rbbst.h"
+#include "../interfaces/rbbst.h"
 #include "string.h"
 
 // Util functions

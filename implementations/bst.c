@@ -1,7 +1,7 @@
 //
 // Created by josoder on 05.10.17.
 //
-#include "bst.h"
+#include "../interfaces/bst.h"
 #include <stdio.h>
 #include <stdlib.h>
 

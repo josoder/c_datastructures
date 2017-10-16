@@ -6,7 +6,7 @@
 #define DATASTRUCTURES_RB_TREE_TREST_H
 
 #include <stdio.h>
-#include "rbbst.h"
+#include "../interfaces/rbbst.h"
 
 int CompareInt(const void* a, const void* b){
     if(a > b){

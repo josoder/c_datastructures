@@ -3,7 +3,7 @@
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include "bst.h"
+#include "../interfaces/bst.h"
 #include <assert.h>
 #include <time.h>
 
