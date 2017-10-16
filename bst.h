@@ -6,6 +6,7 @@
 #define DATASTRUCTURES_BST_H
 
 #include <stdbool.h>
+#include <stdlib.h>
 
 typedef struct {
     int data;

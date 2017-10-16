@@ -15,7 +15,7 @@ BstNode* get_new_node(int data){
 }
 
 /**
- * Inser data into tree
+ * Insert data into tree
  * @param root
  * @param data
  * @return
